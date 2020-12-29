@@ -6,6 +6,8 @@ function check() {
     }
     post.setAttribute("data-load", "true");
     post.addEventListener("click", () => {
+      console.log('test');
+
       const postId = post.getAttribute("data-id");
       const XHR = new XMLHttpRequest();
       XHR.open("GET", `/posts/${postId}`, true);
@@ -27,3 +29,4 @@ function check() {
   });
 }
 setInterval(check, 1000)
+// window.addEventListener("load",check)
